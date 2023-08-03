@@ -98,9 +98,9 @@ console.log(getSymbolKey(symbolForKey)); // Виводимо ключ симво
 
 function useSymbolToStringTag() {
   let myObject={}
-  let S= Symbol()
-  myObject[S]='CustomObject'
-  return myObject[S]
+  
+  myObject=Symbol('CustomObject')
+  return myObject.toString()
   // Створюємо пустий об'єкт myObject.
   // Встановлюємо властивість Symbol об'єкту myObject на значення "CustomObject".
   // Повертаємо рядкове представлення myObject[Symbol].
